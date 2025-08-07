@@ -6,19 +6,25 @@
 [![Elasticsearch](https://img.shields.io/badge/Elasticsearch-8.x-orange.svg)](https://www.elastic.co/)
 [![CI/CD Pipeline](https://github.com/Safwen-amaira/Red-Hunter/actions/workflows/build.yml/badge.svg)](https://github.com/Safwen-amaira/Red-Hunter/actions)
 [![Code Coverage](https://codecov.io/gh/Safwen-amaira/Red-Hunter/branch/main/graph/badge.svg?token=1683f980-b051-4c41-a108-64f3a55e5e74)](https://codecov.io/gh/Safwen-amaira/Red-Hunter)
-
-
 [![OWASP Flagship](https://img.shields.io/badge/OWASP-Project%20%F0%9F%94%92-orange?style=flat)](https://owasp.org)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/YOUR_PROJECT_ID/badge)](https://bestpractices.coreinfrastructure.org/projects/YOUR_PROJECT_ID)
-[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/Safwen-amaira/Red-Hunter)](https://snyk.io/test/github/Safwen-amaira/Red-Hunter)
 
+[![GitHub Stars](https://img.shields.io/github/stars/Safwen-amaira/Red-Hunter?style=social)](https://github.com/Safwen-amaira/Red-Hunter/stargazers)
+[![Contributors](https://img.shields.io/github/contributors/Safwen-amaira/Red-Hunter)](https://github.com/Safwen-amaira/Red-Hunter/graphs/contributors)
+
+
+[![Helm Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https://charts.redhunter.io/index.yaml&label=Helm%20Chart&query=$.entries.redhunter[0].version&color=277A9F&logo=helm)](https://artifacthub.io/packages/helm/redhunter/redhunter)
+[![AWS Deployment](https://img.shields.io/badge/AWS-CDK%20Ready-FF9900?logo=amazon-aws)](https://aws.amazon.com/cdk/)
+[![Terraform](https://img.shields.io/badge/Terraform-Registry-623CE4?logo=terraform)](https://registry.terraform.io)
+[![Security](https://img.shields.io/badge/Security-A%2B-brightgreen)]()
+
+[![Watch on GitHub](https://img.shields.io/github/watchers/Safwen-amaira/Red-Hunter?style=social&label=Watch)]()
 
 
 
 **Enterprise-grade Web Application Firewall with AI-powered threat detection**  
 Protect your web applications from OWASP Top 10 threats, zero-day exploits, and sophisticated attacks with real-time analysis.
 
-![RedHunter Dashboard Preview](https://i.imgur.com/JQ7G8Bv.png)
+
 
 ## 🚀 Key Features
 
