@@ -13,7 +13,7 @@
 
 
 A lightweight Web Application Firewall that combines:  
-✅ **Signature-based detection** (500+ patterns for SQLi/XSS/RCE/LFI)  
+✅ **Signature-based detection** (CMD injection/ Path traversal/Header injection/SQLi/XSS/RCE/LFI)  
 ✅ **Behavioral analysis** (IP reputation, rate limiting)  
 ✅ **Threat intelligence** (Auto-blocking malicious IPs)  
 
