@@ -12,9 +12,16 @@
 [![Security](https://img.shields.io/badge/Security-A%2B-brightgreen)]()
 
 
+A lightweight Web Application Firewall that combines:  
+✅ **Signature-based detection** (500+ patterns for SQLi/XSS/RCE/LFI)  
+✅ **Behavioral analysis** (IP reputation, rate limiting)  
+✅ **Threat intelligence** (Auto-blocking malicious IPs)  
 
-**Enterprise-grade Web Application Firewall with AI-powered threat detection**  
-Protect your web applications from OWASP Top 10 threats, zero-day exploits, and sophisticated attacks with real-time analysis.
+**Built for developers who need:**  
+- **Fast integration** (Works as middleware or standalone)  
+- **Transparent security** (Clear rule definitions in YAML)  
+- **Real-world protection** (Tested against WAVSEP vectors)  
+
 
 
 
