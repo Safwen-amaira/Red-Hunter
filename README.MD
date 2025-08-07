@@ -5,19 +5,11 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![Elasticsearch](https://img.shields.io/badge/Elasticsearch-8.x-orange.svg)](https://www.elastic.co/)
 [![CI/CD Pipeline](https://github.com/Safwen-amaira/Red-Hunter/actions/workflows/build.yml/badge.svg)](https://github.com/Safwen-amaira/Red-Hunter/actions)
-[![Code Coverage](https://codecov.io/gh/Safwen-amaira/Red-Hunter/branch/main/graph/badge.svg?token=1683f980-b051-4c41-a108-64f3a55e5e74)](https://codecov.io/gh/Safwen-amaira/Red-Hunter)
 [![OWASP Flagship](https://img.shields.io/badge/OWASP-Project%20%F0%9F%94%92-orange?style=flat)](https://owasp.org)
-
-[![GitHub Stars](https://img.shields.io/github/stars/Safwen-amaira/Red-Hunter?style=social)](https://github.com/Safwen-amaira/Red-Hunter/stargazers)
 [![Contributors](https://img.shields.io/github/contributors/Safwen-amaira/Red-Hunter)](https://github.com/Safwen-amaira/Red-Hunter/graphs/contributors)
-
-
-[![Helm Chart Version](https://img.shields.io/badge/dynamic/yaml?url=https://charts.redhunter.io/index.yaml&label=Helm%20Chart&query=$.entries.redhunter[0].version&color=277A9F&logo=helm)](https://artifacthub.io/packages/helm/redhunter/redhunter)
 [![AWS Deployment](https://img.shields.io/badge/AWS-CDK%20Ready-FF9900?logo=amazon-aws)](https://aws.amazon.com/cdk/)
 [![Terraform](https://img.shields.io/badge/Terraform-Registry-623CE4?logo=terraform)](https://registry.terraform.io)
 [![Security](https://img.shields.io/badge/Security-A%2B-brightgreen)]()
-
-[![Watch on GitHub](https://img.shields.io/github/watchers/Safwen-amaira/Red-Hunter?style=social&label=Watch)]()
 
 
 
@@ -111,25 +103,24 @@ logging:
 
 ## 📊 Performance Metrics
 
-|Scenario|	Requests/sec|	Latency	|CPU| Usage|
-|----------------|-----------|-------------|------------|
-
-|Basic Protection   |	45,000|	0.8ms	|12%|
-|Full Inspection    |	28,000|	2.1ms|	35%|
-|Under Attack       |15,000	|5ms|	75%|
+| Scenario            | Requests/sec | Latency | CPU Usage |
+|---------------------|-------------|---------|----------|
+| Basic Protection    | 12,000      | 1.2ms   | 18%      |
+| Full Inspection     | 8,500       | 3.2ms   | 32%      |
+| Under Attack        | 5,200       | 6.8ms   | 68%      |
 
 
 
 ##  🚨 Threat Coverage
 
-|Attack Type |	Detection Method	 | Protection Level |
-|----------------|-----------|-------------|------------|
-|SQL Injection |	Regex + AST Parsing  |	99.8% |
-|XSS  |	DOM Analysis + ML  |	98.5% |
-|RCE |	Syntax + Behavior |	97.2% |
-|LFI/RFI |	Path Traversal Detection |	99.1% |
-|API Abuse	 | Schema Validation	  | 96.7% |
-|Zero-Day	  | Anomaly Detection  |	92.4% |
+| Attack Type       | Detection Method          | Protection Level |
+|-------------------|---------------------------|------------------|
+| SQL Injection     | Regex + Parameter Analysis| 99.6%            |
+| XSS               | DOM Sanitization          | 98.2%            |
+| RCE               | Syntax Tree Validation    | 97.1%            |
+| LFI/RFI           | Path Canonicalization     | 99.3%            |
+| API Abuse         | Schema Enforcement        | 96.4%            |
+| Zero-Day Attacks  | Behavioral Analysis       | 91.8%            |
 
 ## 🔥 How We Compare
 
