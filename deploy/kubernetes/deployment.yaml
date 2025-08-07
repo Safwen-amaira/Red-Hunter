@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redhunter-waf
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: redhunter
+  template:
+    metadata:
+      labels:
+        app: redhunter
+    spec:
+      containers:
+      - name: waf
+        image: ghcr.io/yourorg/redhunter:latest # don't forget to change this 
+        ports:
+        - containerPort: 8080
+        - containerPort: 8000
+        volumeMounts:
+        - name: config
+          mountPath: /app/config
+        - name: logs
+          mountPath: /var/log/redhunter
+      volumes:
+      - name: config
+        configMap:
+          name: waf-config
+      - name: logs
+        emptyDir: {}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: waf-config
+data:
+  waf-config.yaml: |
+    general:
+      mode: "protection"
+    protection:
+      block_threshold: 8
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: redhunter-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/waf: "redhunter"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: yourdomain.com ## don't forget to change this 
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: redhunter-waf
+            port:
+              number: 8080
