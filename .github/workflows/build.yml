@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build, Test, and Deploy
 
 on:
   push:
@@ -7,12 +7,12 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up Python
+    - name: Set up Python 3.9
       uses: actions/setup-python@v4
       with:
         python-version: '3.9'
@@ -21,15 +21,24 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install pytest
+        pip install pytest pytest-cov
         
-    - name: Run tests
+    - name: Run tests with coverage
       run: |
-        pytest tests/
+        pytest --cov=./ --cov-report=xml tests/
         
-    - name: Build Docker image
-      run: docker build -t redhunter-waf .
-      
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
     - name: Log in to GitHub Container Registry
       uses: docker/login-action@v2
       with:
@@ -37,7 +46,12 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         
-    - name: Push to GHCR
-      run: |
-        docker tag redhunter-waf ghcr.io/${{ github.repository }}:latest
-        docker push ghcr.io/${{ github.repository }}:latest
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v4
+      with:
+        push: true
+        tags: |
+          ghcr.io/safwen-amaira/red-hunter:latest
+          ghcr.io/safwen-amaira/red-hunter:${{ github.sha }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
