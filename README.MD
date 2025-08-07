@@ -4,12 +4,15 @@
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 [![Elasticsearch](https://img.shields.io/badge/Elasticsearch-8.x-orange.svg)](https://www.elastic.co/)
-[![GitHub Release](https://img.shields.io/github/v/release/Safwen-amaira/Red-Hunter?include_prereleases&style=for-the-badge)](https://github.com/Safwen-amaira/Red-Hunter/releases)
-[![PyPI Version](https://img.shields.io/pypi/v/redhunter-waf?style=for-the-badge&logo=pypi)](https://pypi.org/project/redhunter-waf)
-
 [![CI/CD Pipeline](https://github.com/Safwen-amaira/Red-Hunter/actions/workflows/build.yml/badge.svg)](https://github.com/Safwen-amaira/Red-Hunter/actions)
-[![Code Coverage](https://codecov.io/gh/Safwen-amaira/Red-Hunter/branch/main/graph/badge.svg?token=YOUR_CODECOV_TOKEN)](https://codecov.io/gh/Safwen-amaira/Red-Hunter)
-[![Total Alerts](https://img.shields.io/lgtm/alerts/g/Safwen-amaira/Red-Hunter.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Safwen-amaira/Red-Hunter/alerts/)
+[![Code Coverage](https://codecov.io/gh/Safwen-amaira/Red-Hunter/branch/main/graph/badge.svg?token=1683f980-b051-4c41-a108-64f3a55e5e74)](https://codecov.io/gh/Safwen-amaira/Red-Hunter)
+
+
+[![OWASP Flagship](https://img.shields.io/badge/OWASP-Project%20%F0%9F%94%92-orange?style=flat)](https://owasp.org)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/YOUR_PROJECT_ID/badge)](https://bestpractices.coreinfrastructure.org/projects/YOUR_PROJECT_ID)
+[![Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/Safwen-amaira/Red-Hunter)](https://snyk.io/test/github/Safwen-amaira/Red-Hunter)
+
+
 
 
 **Enterprise-grade Web Application Firewall with AI-powered threat detection**  
