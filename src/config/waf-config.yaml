@@ -1,0 +1,11 @@
+general:
+  mode: "protection"
+  log_level: "info"
+
+protection:
+  block_threshold: 5
+  captcha_threshold: 3
+
+rules:
+  update_frequency: "daily"
+  custom_rules_dir: "config/rules"

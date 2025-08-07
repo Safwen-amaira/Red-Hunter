@@ -1,0 +1,6 @@
+- id: HEADERINJ-001
+  name: HTTP Header Injection
+  severity: high  
+  pattern: "[\r\n]"
+  locations: [headers]
+  action: block

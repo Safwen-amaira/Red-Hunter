@@ -1,0 +1,6 @@
+- id: SQLi-001
+  name: SQL Injection Detection
+  severity: critical
+  pattern: "(([';]?\\s*(OR|AND)\\s+(['\"]?\\w+['\"]?)\\s*=\\s*(['\"]?\\w+['\"]?))|([';]\\s*(--|#|/\\*))|(;\\s*DROP\\s+TABLE))"
+  locations: [url, body, headers]
+  action: block

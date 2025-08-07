@@ -1,0 +1,6 @@
+- id: CMDINJ-001
+  name: Command Injection
+  severity: critical
+  pattern: "(\\||&&|;|`|\\$\\(|\\b(cat|ls|ping|whoami|curl|wget)\\b)"
+  locations: [url, body]
+  action: block

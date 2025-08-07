@@ -1,0 +1,6 @@
+- id: CREDS-001
+  name: Credential Leak Detection
+  severity: high
+  pattern: "(Authorization:\\s*Basic\\s+[a-zA-Z0-9+/=]+)"
+  locations: [headers]
+  action: block

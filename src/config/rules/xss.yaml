@@ -1,0 +1,6 @@
+- id: "XSS-001"
+  name: "JavaScript Injection"
+  severity: "critical"
+  pattern: "(<script.*?>|javascript:|alert\\(|onerror=)"
+  locations: ["url", "body", "headers"]
+  action: "block"

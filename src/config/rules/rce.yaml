@@ -1,0 +1,6 @@
+- id: RCE-001
+  name: Remote Code Execution
+  severity: critical
+  pattern: "(\\b(system|exec|passthru|shell_exec|popen|eval|base64_decode)\\b\\s*\\()"
+  locations: [body, url]
+  action: block

@@ -1,23 +1,5 @@
-general:
-  mode: "protection"  # monitoring|protection
-  log_level: "info"
-
 protection:
-  block_threshold: 10
-  captcha_threshold: 5
-  ip_ban:
-    enabled: true
-    duration: 3600  # 1 hour in seconds
-
+  block_threshold: 5
+  captcha_threshold: 3
 rules:
-  update_frequency: "daily"  # hourly|daily|weekly
-  custom_rules_dir: "/app/config/custom_rules"
-
-logging:
-  elasticsearch:
-    enabled: false
-    hosts: ["http://localhost:9200"]
-    index: "redhunter-logs-%{+YYYY.MM.dd}"
-  file:
-    enabled: true
-    path: "/var/log/redhunter/access.log"
+  custom_rules_dir: "config/rules"

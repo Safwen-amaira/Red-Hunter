@@ -1,0 +1,6 @@
+- id: LFI-001
+  name: Local File Inclusion
+  severity: high
+  pattern: "(\\.\\./|etc/passwd|/proc/self/environ|input=.*\\.(php|txt|log))"
+  locations: [url, body]
+  action: block

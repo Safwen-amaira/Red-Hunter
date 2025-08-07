@@ -96,6 +96,8 @@ logging:
 ## 📊 Performance Metrics
 
 |Scenario|	Requests/sec|	Latency	|CPU| Usage|
+|----------------|-----------|-------------|------------|
+
 |Basic Protection   |	45,000|	0.8ms	|12%|
 |Full Inspection    |	28,000|	2.1ms|	35%|
 |Under Attack       |15,000	|5ms|	75%|
@@ -104,13 +106,23 @@ logging:
 
 ##  🚨 Threat Coverage
 
-Attack Type |	Detection Method	 | Protection Level |
-SQL Injection |	Regex + AST Parsing  |	99.8% |
-XSS  |	DOM Analysis + ML  |	98.5% |
-RCE |	Syntax + Behavior |	97.2% |
-LFI/RFI |	Path Traversal Detection |	99.1%
-API Abuse	 | Schema Validation	  | 96.7%
-Zero-Day	  | Anomaly Detection  |	92.4%
+|Attack Type |	Detection Method	 | Protection Level |
+|----------------|-----------|-------------|------------|
+|SQL Injection |	Regex + AST Parsing  |	99.8% |
+|XSS  |	DOM Analysis + ML  |	98.5% |
+|RCE |	Syntax + Behavior |	97.2% |
+|LFI/RFI |	Path Traversal Detection |	99.1% |
+|API Abuse	 | Schema Validation	  | 96.7% |
+|Zero-Day	  | Anomaly Detection  |	92.4% |
+
+## 🔥 How We Compare
+
+
+| Feature         | RedHunter | ModSecurity | Cloudflare |
+|----------------|-----------|-------------|------------|
+| **Python**     | ✅        | ❌          | ❌         |
+| **Self-Hosted**| ✅        | ✅          | ❌         |
+| **Cost**      | Free      | Free        | $$$$       |
 
 
 ## 🤝 Contributing

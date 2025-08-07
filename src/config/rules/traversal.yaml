@@ -1,0 +1,6 @@
+- id: PATH-001
+  name: Path Traversal
+  severity: high
+  pattern: "(\\.\\./|\\b(root|boot|etc|home)\\b)"
+  locations: [url, body]
+  action: block

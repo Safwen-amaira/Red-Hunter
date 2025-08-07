@@ -16,7 +16,6 @@ async def scan_payload(payload: str):
 
 @router.get("/ip/reputation/{ip_address}")
 async def check_ip_reputation(ip_address: str):
-    # Would integrate with threat intelligence feeds
     return {
         "ip": ip_address,
         "reputation": "unknown",
